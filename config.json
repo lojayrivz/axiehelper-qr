@@ -1,0 +1,21 @@
+{
+  "client_token": "DISCORD_BOT_TOKEN",
+  "guild_id": "SERVER_ID",
+  "scholars": [
+    {
+      "id": "DISCORD_USER_1_ID",
+      "email": "EMAIL1@EMAIL",
+      "password": "PASSWORD1"
+    },
+    {
+      "id": "DISCORD_USER_2_ID",
+      "email": "EMAIL2@EMAIL",
+      "password": "PASSWORD2"
+    },
+    {
+      "id": "",
+      "email": "",
+      "password": ""
+    }
+  ]
+}
