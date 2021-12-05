@@ -30,7 +30,7 @@ With the terminal open, run the `node -v` command to make sure you've successful
 ### Installing Dependencies
 With Node.js installed, you can now install the required dependencies in order to run your discord bot
 
-Using the terminal Simply run this command in your discord bot folder to install the required dependencies:
+Using the terminal simply run this command in your discord bot folder to install the required dependencies:
 ```
 npm install
 ```
@@ -41,10 +41,12 @@ Wait for it to finish and you should now have `node_modules` folder in the direc
 Create your bot in [Discord Developer Portal](https://discord.com/developers/applications)
 
 You can follow this [video](https://www.youtube.com/watch?v=b9KQxREfn4c) on creating a discord bot:
+
 [![image](https://i.imgur.com/S0WO9vD.png1)](https://www.youtube.com/watch?v=b9KQxREfn4c)
 #
 ### Launching your Discord Bot
 Copy your Bot's Token in [Discord Developer Portal](https://discord.com/developers/applications)
+
 ![image](https://i.imgur.com/3TvBpQp.png?1)
 
 In your discord bot folder, open the `config.json` and it should look like this:
@@ -79,4 +81,4 @@ If you don't understand something in the documentation or you are experiencing p
 ![Discord Banner 2](https://discordapp.com/api/guilds/864194584732106782/widget.png?style=banner2)
 
 # License
-[GNU GPL V3](https://choosealicense.com/licenses/mit/)
+[GNU GPL V3](https://www.gnu.org/licenses/gpl-3.0.en.html)
