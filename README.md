@@ -10,7 +10,7 @@
 - Axie Infinity Email and Password
 
 # Installation
-Download the Source Code
+Download the [Source Code](https://github.com/ikr0w/axiehelper-qr/releases)
 
 ### Installing Node.js
 Install [Node.js](https://nodejs.org/) v16.6 or higher
@@ -74,11 +74,12 @@ For `SERVER_ID`, `DISCORD_USER_ID_1`, and `DISCORD_USER_ID_2` you can follow thi
 
 **Save your changes and the bot is now ready!**
 
-### Run `start.bat` to launch your discord bot.
+**Run `start.bat` to launch your Discord Bot.**
 
 # Support
-If you don't understand something in the documentation or you are experiencing problems, please don't hesitate to join our [Support Server](https://discord.com/invite/NqvAQaWssu)\
-![Discord Banner 2](https://discordapp.com/api/guilds/864194584732106782/widget.png?style=banner2)
+[![Discord Banner 2](https://discordapp.com/api/guilds/864194584732106782/widget.png?style=banner2)](https://discord.gg/xyWaa4rRBy)
+
+If you don't understand something in the documentation or you are experiencing problems, please don't hesitate to join our [Support Server](https://discord.gg/xyWaa4rRBy)
 
 # License
 [GNU GPL V3](https://www.gnu.org/licenses/gpl-3.0.en.html)
