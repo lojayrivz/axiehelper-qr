@@ -44,6 +44,42 @@ You can follow this [video](https://www.youtube.com/watch?v=b9KQxREfn4c) on crea
 
 [![image](https://i.imgur.com/S0WO9vD.png1)](https://www.youtube.com/watch?v=b9KQxREfn4c)
 #
+
+### Inviting Your Bot
+So far you’ve made a Discord Bot account but it’s not actually in any server
+
+If you want to invite your bot you must create an Invite URL for it
+
+There are 2 methods provided on how to do it
+1. Modifying the URL Provided
+2. Generating the Invite URL
+
+#### 1. Modifying the URL Provided
+First you need to copy your `Client ID` at `OAuth2` then `General` and copy the `Client ID`
+
+You just replace the `YOUR_BOT_ID` from this URL with the `Client ID` that you copied
+```
+https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=100352&scope=bot%20applications.commands
+```
+
+#### 2. Generating the Invite URL
+Simply go to `OAuth2` tab and and select `URL Generator`
+
+![image](https://i.imgur.com/bQt9HMa.png)
+
+On Scopes tick the `bots` and `application.commands`
+
+![image](https://i.imgur.com/XyYjvHH.png)
+
+Tick the permissions required for your bot to function under “Bot Permissions”
+
+![image](https://i.imgur.com/w310qgf.gif)
+
+Now the resulting URL can be used to add your bot to a server.
+
+Copy and paste the URL into your browser, choose a server to invite the bot to, and click “Authorize”.
+#
+
 ### Launching your Discord Bot
 Copy your Bot's Token in [Discord Developer Portal](https://discord.com/developers/applications)
 
@@ -79,7 +115,7 @@ For `SERVER_ID`, `DISCORD_USER_ID_1`, and `DISCORD_USER_ID_2` you can follow thi
 # Support
 [![Discord Banner 2](https://discordapp.com/api/guilds/864194584732106782/widget.png?style=banner2)](https://discord.gg/xyWaa4rRBy)
 
-If you don't understand something in the documentation or you are experiencing problems, please don't hesitate to join our [Support Server](https://discord.gg/xyWaa4rRBy)
+If you don't understand something in the documentation or you are experiencing problems, please don't hesitate to join our [Discord Server](https://discord.gg/xyWaa4rRBy)
 
 # License
 [GNU GPL V3](https://www.gnu.org/licenses/gpl-3.0.en.html)
