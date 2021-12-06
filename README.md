@@ -3,6 +3,8 @@
 #### Commands:
 - `qr` - Generate a QR Code.
 
+![image](https://i.imgur.com/l1Udc6b.png)
+
 # Requirements
 - Node.js version 16.6 or higher
 - Discord Bot Token
@@ -111,6 +113,9 @@ For `SERVER_ID`, `DISCORD_USER_ID_1`, and `DISCORD_USER_ID_2` you can follow thi
 **Save your changes and the bot is now ready!**
 
 **Run `start.bat` to launch your Discord Bot.**
+
+# Customization
+You can replace the `icon.png` at `./assets/images/` to any image you like just make sure the file name is still the same
 
 # Support
 [![Discord Banner 2](https://discordapp.com/api/guilds/864194584732106782/widget.png?style=banner2)](https://discord.gg/xyWaa4rRBy)
