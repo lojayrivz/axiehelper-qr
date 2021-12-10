@@ -1,21 +1,19 @@
-const { getMissingPermission } = require('../utils/getMissingPermission');
+const { getMissingPermission } = require('../utils/getMissingPermission')
 
 module.exports = async (client, interaction) => {
-    if (interaction.user.bot) return;
+    if (interaction.user.bot) return
     if (!interaction.isCommand()) return
-
-    if (!client.slashCommands.has(interaction.commandName)) return;
+    if (!client.slashCommands.has(interaction.commandName)) return
 
     const command = client.slashCommands.get(interaction.commandName)
 
-    // if the command settings is set to guildOnly
-    if (!interaction.inGuild() && command.settings.guildOnly) return interaction.reply({ content: 'You need to be in a server to use this command.', ephemeral: true });
+    if (!interaction.inGuild() && command.settings.guildOnly) return interaction.reply({ content: 'You need to be in a server to use this command.', ephemeral: true })
 
-    // Check command settings for permission required
     if (command.settings.botPermissions && interaction.inGuild()) {
         // Gets overall set of bot's permissions
         const botPerms = interaction.channel.permissionsFor(interaction.guild.me);
-        // Check if bot has permissions
+
+        // Check if the bot has enough permissions to execute the command
         if (!botPerms || !botPerms.has(command.settings.botPermissions)) {
             const missingPerms = await botPerms.missing(command.settings.botPermissions)
             const formattedMissingPerms = getMissingPermission(missingPerms).join('` `')
@@ -23,11 +21,11 @@ module.exports = async (client, interaction) => {
         }
     }
 
-    // Check command settings for permission required
     if (command.settings.userPermissions && interaction.inGuild()) {
         // Gets overall set of user's permissions
-        const userPerms = interaction.channel.permissionsFor(interaction.member);
-        // Check if user has permissions
+        const userPerms = interaction.channel.permissionsFor(interaction.member)
+
+        // Check if the user has enough permissions to execute the command
         if (!userPerms || !userPerms.has(command.settings.userPermissions)) {
             const missingPerms = await userPerms.missing(command.settings.userPermissions)
             const formattedMissingPerms = getMissingPermission(missingPerms).join('` `')
@@ -38,12 +36,13 @@ module.exports = async (client, interaction) => {
     try {
         await client.slashCommands.get(interaction.commandName).execute(interaction, client);
     } catch (error) {
-        console.error(error);
+        console.error(error)
+
         if (interaction.deferred) {
-            await interaction.editReply({ content: 'There was an error while executing this command.', ephemeral: true }).catch(e => console.trace(e.message))
+            await interaction.editReply({ content: 'There was an error while executing this command.', ephemeral: true }).catch(error => console.error(error))
         } else {
             await interaction.deferReply()
-            await interaction.editReply({ content: 'There was an error while executing this command.', ephemeral: true }).catch(e => console.trace(e.message))
+            await interaction.editReply({ content: 'There was an error while executing this command.', ephemeral: true }).catch(error => console.error(error))
         }
     }
 }
